@@ -21,14 +21,13 @@ $(function() {
       $this.prop("disabled", true); // Disable submit button until AJAX call is complete to prevent duplicate messages
       $.ajax({
         // url: "././mail/contact_me.php",
-        url: "https://app.99inbound.com/api/e/m-oBPY2a",
+        url: "https://app.99inbound.com/api/e/XDYwE2bw",
         type: "POST",
         data: {
           name: name,
           phone: phone,
           email: email,
-          message: message,
-          windy_violet_checked_tv: $("input#windy_violet_checked_tv").val()
+          message: message
         },
         cache: false,
         success: function() {
@@ -37,7 +36,7 @@ $(function() {
           $('#success > .alert-success').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
             .append("</button>");
           $('#success > .alert-success')
-            .append("<strong>Your message has been sent. </strong>");
+            .append("<strong>Thank you for contacting us. You are very important to us, we will get in touch with you ASAP.  </strong>");
           $('#success > .alert-success')
             .append('</div>');
           //clear all fields
